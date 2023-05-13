@@ -34,7 +34,8 @@ public class MainProductsPage extends BasePage {
 
     @Step("Click on button in header: Hej! Log in or sign up ")
     public void clickHejLogInOrSignUpButton() {
-        driver.findElement(By.xpath("//*[@id='loyalty-modal-button']")).click();
-        }
+        driver.findElement(By.xpath("//*[@id='loyalty-modal-button']")).click(); }
 
+    public void clickInHeaderWindowCrossButton() {
+        driver.findElement(By.xpath("//*[@id='close-button']")).click(); }
 }
