@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class HeaderWindow extends BasePage {
+public class Header extends BasePage {
 
     @FindBy(xpath = "//*[@class='header']//ancestor::*[contains(text(),'Sign in')]")
     WebElement signInInHeaderBtn;
@@ -19,7 +19,7 @@ public class HeaderWindow extends BasePage {
     WebElement generalSignInLabel;
 
 
-    public HeaderWindow(WebDriver driver) {
+    public Header(WebDriver driver) {
 
         super(driver);
     }
