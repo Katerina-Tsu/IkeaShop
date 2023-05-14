@@ -10,11 +10,12 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 
 public class MainProductsPage extends BasePage {
 
-    @FindBy(xpath = "//*[@id='loyalty-modal-button']")
-    WebElement hejLogInOrSignUpBtn;
 
     @FindBy(xpath = "//*[@id='little-man-slider']")
     WebElement headerWindowInMainPageLabel;
+
+    @FindBy(xpath = "//*[@id='content']")
+    WebElement mainPageLabel;
 
     public MainProductsPage(WebDriver driver) {
         super(driver);
@@ -32,10 +33,17 @@ public class MainProductsPage extends BasePage {
         wait.until(ExpectedConditions.visibilityOf(headerWindowInMainPageLabel));
     }
 
+    public void waitForHeaderWindowWillBeClosed() {
+        wait.until(ExpectedConditions.visibilityOf(mainPageLabel));
+    }
+
     @Step("Click on button in header: Hej! Log in or sign up ")
     public void clickHejLogInOrSignUpButton() {
         driver.findElement(By.xpath("//*[@id='loyalty-modal-button']")).click(); }
 
     public void clickInHeaderWindowCrossButton() {
         driver.findElement(By.xpath("//*[@id='close-button']")).click(); }
+
+    public void closeHeaderWindowByOtherSpace() {
+        driver.findElement(By.xpath("//*[@id='loyalty-modal__modal-closer']")).click(); }
 }
