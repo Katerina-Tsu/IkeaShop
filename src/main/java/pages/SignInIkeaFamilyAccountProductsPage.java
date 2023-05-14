@@ -4,7 +4,7 @@ import io.qameta.allure.Link;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-public class SignInIkeaFamilyAccountProductsPage extends MainProductsPage {
+public class SignInIkeaFamilyAccountProductsPage extends SecondLineContainerTopPage {
 
 
     public SignInIkeaFamilyAccountProductsPage(WebDriver driver) { super(driver);}

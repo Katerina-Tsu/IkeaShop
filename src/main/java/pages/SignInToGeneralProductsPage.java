@@ -4,7 +4,7 @@ import io.qameta.allure.Link;
 import io.qameta.allure.Step;
 import org.openqa.selenium.WebDriver;
 
-public class SignInToGeneralProductsPage extends MainProductsPage {
+public class SignInToGeneralProductsPage extends SecondLineContainerTopPage {
 
     public SignInToGeneralProductsPage(WebDriver driver) { super(driver);}
 

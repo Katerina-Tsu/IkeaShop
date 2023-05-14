@@ -8,7 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class MainProductsPage extends BasePage {
+public class SecondLineContainerTopPage extends BasePage {
 
 
     @FindBy(xpath = "//*[@id='little-man-slider']")
@@ -17,7 +17,7 @@ public class MainProductsPage extends BasePage {
     @FindBy(xpath = "//*[@id='content']")
     WebElement mainPageLabel;
 
-    public MainProductsPage(WebDriver driver) {
+    public SecondLineContainerTopPage(WebDriver driver) {
         super(driver);
     }
 
