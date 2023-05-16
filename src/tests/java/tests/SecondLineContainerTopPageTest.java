@@ -32,4 +32,14 @@ public class SecondLineContainerTopPageTest extends BaseTest {
         secondLineContainerTopPage.waitForHeaderWindowWillBeClosed();
         Assert.assertTrue(secondLineContainerTopPage.isMainPageOpened());
     }
+
+    @Test(groups = "Header window. Right side", description = "Open Header window for button 'Hej!'. Click sign in common button. ")
+    public void signInCommonBtnTest() {
+        secondLineContainerTopPage.openMainPage();
+        secondLineContainerTopPage.clickHejLogInOrSignUpButton();
+        secondLineContainerTopPage.waitForHeaderWindowWillBeOpen();
+        secondLineContainerTopPage.clickSignInCommonButton();
+        secondLineContainerTopPage.displayedLoginPage();
+        // need to write the equal between expecttion and result, that I seen on the screen.
+    }
 }

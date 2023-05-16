@@ -17,6 +17,8 @@ public class SecondLineContainerTopPage extends BasePage {
     @FindBy(xpath = "//*[@id='content']")
     WebElement mainPageLabel;
 
+//    @FindBy(css = "<span> Login </span>")
+
     public SecondLineContainerTopPage(WebDriver driver) {
         super(driver);
     }
@@ -46,4 +48,11 @@ public class SecondLineContainerTopPage extends BasePage {
 
     public void closeHeaderWindowByOtherSpace() {
         driver.findElement(By.xpath("//*[@id='loyalty-modal__modal-closer']")).click(); }
+
+    public void clickSignInCommonButton() {
+        driver.findElement(By.xpath("//*[@id='header__button']")).click(); }
+
+        public void displayedLoginPage() {
+        driver.findElement(By.cssSelector("div h1 span")).isDisplayed();
+        }
 }
