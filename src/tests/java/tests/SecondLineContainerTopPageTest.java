@@ -39,7 +39,8 @@ public class SecondLineContainerTopPageTest extends BaseTest {
         secondLineContainerTopPage.clickHejLogInOrSignUpButton();
         secondLineContainerTopPage.waitForHeaderWindowWillBeOpen();
         secondLineContainerTopPage.clickSignInCommonButton();
-        secondLineContainerTopPage.displayedLoginPage();
-        // need to write the equal between expecttion and result, that I seen on the screen.
+//        secondLineContainerTopPage.displayedLoginPage();
+        Assert.assertTrue(secondLineContainerTopPage.foundLoginPageLabel());
+
     }
 }
