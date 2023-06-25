@@ -7,7 +7,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 
-public class Header extends BasePage {
+public class HeaderTopMessage extends BasePage {
 
     @FindBy(xpath = "//*[@class='header']//ancestor::*[contains(text(),'Sign in')]")
     WebElement signInInHeaderBtn;
@@ -19,13 +19,14 @@ public class Header extends BasePage {
     WebElement generalSignInLabel;
 
 
-    public Header(WebDriver driver) {
+    public HeaderTopMessage(WebDriver driver) {
 
         super(driver);
     }
 
     @Step("Click on button in header: Sign in ")
-    public  void clickSignInButton() { signInInHeaderBtn.click();}
+    public  void clickGetStandardDeliveryButton() {
+        this.signInInHeaderBtn.click();}
 
     public boolean isSignInInHeaderButtonShown() {return signInInHeaderShownBtn.isDisplayed(); }
 

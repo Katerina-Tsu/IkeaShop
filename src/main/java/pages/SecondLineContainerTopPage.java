@@ -27,11 +27,11 @@ public class SecondLineContainerTopPage extends BasePage {
         super(driver);
     }
 
-    @Step("Open main shop page")
+/*    @Step("Open main shop page")
     @Link("https://www.ikea.com/us/en")
     public void openMainPage() {
         driver.get(IKEA_SHOP_URL);
-    }
+    }*/
 
     public boolean isMainPageOpened() {return headerWindowInMainPageLabel.isDisplayed(); }
 

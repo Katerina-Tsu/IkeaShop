@@ -6,7 +6,7 @@ public class HeaderTest extends BaseTest {
 
     @Test(groups = "Buttons frame", description = "Sign in to my account")
     public void signInTest() {
-        secondLineContainerTopPage.openMainPage();
+        mainPage.openMainPage();
         secondLineContainerTopPage.clickHejLogInOrSignUpButton();
 
     }

@@ -14,8 +14,9 @@ import java.time.Duration;
 @Listeners(TestListener.class)
 public class BaseTest implements TestConstants {
     WebDriver driver;
+    MainPage mainPage;
     SecondLineContainerTopPage secondLineContainerTopPage;
-    Header headerPage;
+    HeaderTopMessage headerTopMessage;
     SignInToGeneralProductsPage signInToGeneralPage;
     SignInIkeaFamilyAccountProductsPage signInIkeaFamilyAccountPage;
 
@@ -34,8 +35,9 @@ public class BaseTest implements TestConstants {
     public void endTest() { driver.quit(); }
 
     public void initPage() {
+        mainPage = new MainPage(driver);
         secondLineContainerTopPage = new SecondLineContainerTopPage(driver);
-        headerPage = new Header(driver);
+        headerTopMessage = new HeaderTopMessage(driver);
         signInToGeneralPage = new SignInToGeneralProductsPage(driver);
         signInIkeaFamilyAccountPage = new SignInIkeaFamilyAccountProductsPage(driver);
     }
